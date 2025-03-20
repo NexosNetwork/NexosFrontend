@@ -1,0 +1,60 @@
+.connect-store-container {
+    padding: 20px;
+  }
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .platform-card {
+    text-align: center;
+  }
+  .platform-icon {
+    font-size: 48px;
+    height: 48px;
+    width: 48px;
+    margin: 20px 0;
+  }
+  mat-card-actions {
+    padding: 16px;
+  }
+
+
+
+  .dialog-title {
+    font-size: 20px;
+    padding: 16px;
+  }
+  
+  .dialog-content {
+    padding: 0 16px 16px;
+  }
+  
+  .dialog-actions {
+    padding: 8px 16px;
+  }
+  
+  .mat-dialog-container {
+    padding: 0;
+    border-radius: 8px;
+    /* Other custom styles */
+  }
+
+  .mat-dialog-container {
+    max-width: 90vw;
+    width: 400px;
+  }
+
+  .title{
+    font-weight: bolder;
+  }
+  
+  .mat-success {
+    background-color: green;
+    color: #fff;
+}
+
+.status-model{
+  padding: 20px;
+}

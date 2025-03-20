@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+.success-snackbar {
+    background-color: #4caf50; /* green for success */
+    color: #fff;
+  }
+  
+  .error-snackbar {
+    background-color: #f44336; /* red for error */
+    color: #fff;
+  }
+  

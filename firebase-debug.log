@@ -1,0 +1,249 @@
+[debug] [2025-01-08T15:35:00.820Z] ----------------------------------------------------------------------
+[debug] [2025-01-08T15:35:00.823Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-01-08T15:35:00.824Z] CLI Version:   13.29.1
+[debug] [2025-01-08T15:35:00.824Z] Platform:      win32
+[debug] [2025-01-08T15:35:00.824Z] Node Version:  v20.18.1
+[debug] [2025-01-08T15:35:00.824Z] Time:          Wed Jan 08 2025 16:35:00 GMT+0100 (Central European Standard Time)
+[debug] [2025-01-08T15:35:00.825Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-08T15:35:00.900Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-08T15:35:00.901Z] > authorizing via signed-in user (nexosnetwork789@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\baij\Desktop\egret-v18.0.0\seed - Copy
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-01-08T15:35:09.612Z] Using project from CLI flag: nexosecomsys
+[debug] [2025-01-08T15:35:09.613Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:09.613Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:09.614Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nexosecomsys [none]
+[debug] [2025-01-08T15:35:09.974Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nexosecomsys 200
+[debug] [2025-01-08T15:35:09.974Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nexosecomsys {"projectId":"nexosecomsys","projectNumber":"813224788544","displayName":"nexosecomsys","name":"projects/nexosecomsys","resources":{"hostingSite":"nexosecomsys"},"state":"ACTIVE","etag":"1_63e9f84e-9573-4a77-8436-236884d359cd"}
+[info] i  Using project nexosecomsys (nexosecomsys) 
+[info] 
+=== Dataconnect Setup
+[debug] [2025-01-08T15:35:09.979Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:09.979Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:09.980Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/nexosecomsys/billingInfo [none]
+[debug] [2025-01-08T15:35:10.653Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/nexosecomsys/billingInfo 200
+[debug] [2025-01-08T15:35:10.653Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/nexosecomsys/billingInfo {"name":"projects/nexosecomsys/billingInfo","projectId":"nexosecomsys","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-01-08T15:35:10.654Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:10.654Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:10.654Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/sqladmin.googleapis.com [none]
+[debug] [2025-01-08T15:35:10.655Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/sqladmin.googleapis.com x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:35:11.536Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/sqladmin.googleapis.com 200
+[debug] [2025-01-08T15:35:11.536Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/sqladmin.googleapis.com [omitted]
+[info] +  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] i  dataconnect\dataconnect.yaml is unchanged 
+[info] i  dataconnect\schema\schema.gql is unchanged 
+[info] +  Wrote dataconnect\connector\connector.yaml 
+[info] i  dataconnect\connector\queries.gql is unchanged 
+[info] i  dataconnect\connector\mutations.gql is unchanged 
+[info] +  Detected WEB app in directory C:\Users\baij\Desktop\egret-v18.0.0\seed - Copy 
+[info] i  Wrote new config to C:\Users\baij\Desktop\egret-v18.0.0\seed - Copy\dataconnect\connector/connector.yaml 
+[info] I0108 16:35:22.802646   27472 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "C:\\Users\\baij\\Desktop\\egret-v18.0.0\\seed - Copy\\dataconnect-generated\\js\\default-connector"
+I0108 16:35:22.803837   27472 generate.go:40] Generated all sources. Writing them to disk...
+I0108 16:35:22.804984   27472 collector.go:107] connector "default" javascriptSdk wrote into "C:\\Users\\baij\\Desktop\\egret-v18.0.0\\seed - Copy\\dataconnect-generated\\js\\default-connector"
+Generated sources: index.cjs.js [225B] package.json [634B] index.d.ts [264B] esm\index.esm.js [184B] esm\package.json [17B] 
+I0108 16:35:22.807260   27472 installsdk.go:48] Package @firebasegen/default-connector is already installed. Skipping installation
+
+[info] i  Generated SDK code for default 
+[info] +  If you'd like to add more generated SDKs to your app your later, run firebase init dataconnect:sdk again 
+[info] i  If you'd like to provision a CloudSQL Postgres instance on the Firebase Data Connect no-cost trial:
+1. Please upgrade to the pay-as-you-go (Blaze) billing plan. Visit the following page:
+     https://console.firebase.google.com/project/nexosecomsys/usage/details
+2. Run firebase init dataconnect again to configure the Cloud SQL instance.
+3. Run firebase deploy --only dataconnect to deploy your Data Connect service. 
+[info] 
+=== Firestore Setup
+[debug] [2025-01-08T15:35:22.816Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:22.816Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:22.816Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/firestore.googleapis.com [none]
+[debug] [2025-01-08T15:35:22.816Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/firestore.googleapis.com x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:35:23.688Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/firestore.googleapis.com 200
+[debug] [2025-01-08T15:35:23.688Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/firestore.googleapis.com [omitted]
+[debug] [2025-01-08T15:35:23.689Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:23.689Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:23.689Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/nexosecomsys/databases/(default) [none]
+[debug] [2025-01-08T15:35:23.916Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/nexosecomsys/databases/(default) 200
+[debug] [2025-01-08T15:35:23.916Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/nexosecomsys/databases/(default) {"name":"projects/nexosecomsys/databases/(default)","uid":"5a740011-30f7-4ea2-9960-5a32f861f42e","createTime":"2025-01-08T15:33:43.989009Z","updateTime":"2025-01-08T15:33:43.989009Z","locationId":"eur3","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-01-08T15:33:43.989009Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"e","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IIDSxeG55ooDMJH26LG55ooD"}
+[debug] [2025-01-08T15:35:23.916Z] database_type: FIRESTORE_NATIVE
+[debug] [2025-01-08T15:35:23.916Z] database_type: FIRESTORE_NATIVE
+[debug] [2025-01-08T15:35:23.916Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-08T15:35:23.916Z] > authorizing via signed-in user (nexosnetwork789@gmail.com)
+[debug] [2025-01-08T15:35:23.916Z] [iam] checking project nexosecomsys for permissions ["firebase.projects.get"]
+[debug] [2025-01-08T15:35:23.917Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:23.917Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:35:23.917Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions [none]
+[debug] [2025-01-08T15:35:23.917Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:35:23.917Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-08T15:35:25.709Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions 200
+[debug] [2025-01-08T15:35:25.709Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-01-08T15:36:01.274Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:01.274Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:01.275Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/nexosecomsys/releases pageSize=10&pageToken=
+[debug] [2025-01-08T15:36:02.039Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/nexosecomsys/releases 200
+[debug] [2025-01-08T15:36:02.039Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/nexosecomsys/releases {"releases":[{"name":"projects/nexosecomsys/releases/cloud.firestore","rulesetName":"projects/nexosecomsys/rulesets/34d7536b-299f-429a-9be1-b75ffa6caf79","createTime":"2025-01-08T15:33:50.025022Z","updateTime":"2025-01-08T15:33:50.025022Z"}]}
+[debug] [2025-01-08T15:36:02.039Z] Found ruleset: projects/nexosecomsys/rulesets/34d7536b-299f-429a-9be1-b75ffa6caf79
+[debug] [2025-01-08T15:36:02.039Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:02.039Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:02.040Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/nexosecomsys/rulesets/34d7536b-299f-429a-9be1-b75ffa6caf79 [none]
+[debug] [2025-01-08T15:36:02.718Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/nexosecomsys/rulesets/34d7536b-299f-429a-9be1-b75ffa6caf79 200
+[debug] [2025-01-08T15:36:02.719Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/nexosecomsys/rulesets/34d7536b-299f-429a-9be1-b75ffa6caf79 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-01-08T15:36:05.263Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:05.264Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:05.264Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:05.264Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:05.264Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/nexosecomsys/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2025-01-08T15:36:05.266Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/nexosecomsys/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2025-01-08T15:36:05.470Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/nexosecomsys/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2025-01-08T15:36:05.470Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/nexosecomsys/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2025-01-08T15:36:05.856Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/nexosecomsys/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2025-01-08T15:36:05.856Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/nexosecomsys/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/nexosecomsys/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Genkit Setup
+[debug] [2025-01-08T15:36:11.665Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-08T15:36:11.665Z] > authorizing via signed-in user (nexosnetwork789@gmail.com)
+[debug] [2025-01-08T15:36:11.665Z] [iam] checking project nexosecomsys for permissions ["firebase.projects.get"]
+[debug] [2025-01-08T15:36:11.665Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:11.665Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:11.666Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions [none]
+[debug] [2025-01-08T15:36:11.666Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:36:11.666Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-08T15:36:12.380Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions 200
+[debug] [2025-01-08T15:36:12.381Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-08T15:36:12.381Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:12.381Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:12.381Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:12.381Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:12.381Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-01-08T15:36:12.381Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:36:12.383Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-01-08T15:36:12.383Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:36:13.280Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/runtimeconfig.googleapis.com 200
+[debug] [2025-01-08T15:36:13.280Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-01-08T15:36:13.288Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com 200
+[debug] [2025-01-08T15:36:13.288Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-01-08T15:36:13.288Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:13.289Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:13.289Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2025-01-08T15:36:13.289Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:36:14.410Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2025-01-08T15:36:14.410Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2025-01-08T15:36:24.417Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:24.418Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:36:24.418Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-01-08T15:36:24.418Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:36:25.555Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com 200
+[debug] [2025-01-08T15:36:25.555Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/tsconfig.json 
+[info] +  Wrote functions/tsconfig.dev.json 
+[info] +  Wrote functions/src/index.ts 
+[info] +  Wrote functions/.gitignore 
+[info] 
+[info] i  genkit: Installing Genkit CLI version 0.9.12
+ 
+[info] i  aiplatform: ensuring required API aiplatform.googleapis.com is enabled... 
+[debug] [2025-01-08T15:37:44.297Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:44.297Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:44.297Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/aiplatform.googleapis.com [none]
+[debug] [2025-01-08T15:37:44.297Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/aiplatform.googleapis.com x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:37:44.922Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/aiplatform.googleapis.com 200
+[debug] [2025-01-08T15:37:44.923Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/aiplatform.googleapis.com [omitted]
+[warn] !  aiplatform: missing required API aiplatform.googleapis.com. Enabling now... 
+[debug] [2025-01-08T15:37:44.923Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:44.923Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:44.924Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/aiplatform.googleapis.com:enable [none]
+[debug] [2025-01-08T15:37:44.924Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/aiplatform.googleapis.com:enable x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:37:45.248Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/aiplatform.googleapis.com:enable 400
+[debug] [2025-01-08T15:37:45.248Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/aiplatform.googleapis.com:enable [omitted]
+[error] !!  genkit: Genkit initialization failed: Your project nexosecomsys must be on the Blaze (pay-as-you-go) plan to complete this command. Required API aiplatform.googleapis.com can't be enabled until the upgrade is complete. To upgrade, visit the following URL:
+
+https://console.firebase.google.com/project/nexosecomsys/usage/details 
+[info] 
+=== Functions Setup
+[debug] [2025-01-08T15:37:45.250Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-08T15:37:45.250Z] > authorizing via signed-in user (nexosnetwork789@gmail.com)
+[debug] [2025-01-08T15:37:45.250Z] [iam] checking project nexosecomsys for permissions ["firebase.projects.get"]
+[debug] [2025-01-08T15:37:45.250Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:45.250Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:45.250Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions [none]
+[debug] [2025-01-08T15:37:45.251Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:37:45.251Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-08T15:37:45.472Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions 200
+[debug] [2025-01-08T15:37:45.472Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nexosecomsys:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-08T15:37:45.472Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:45.472Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:45.472Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:45.473Z] Checked if tokens are valid: true, expires at: 1736352628566
+[debug] [2025-01-08T15:37:45.473Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-01-08T15:37:45.473Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:37:45.473Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-01-08T15:37:45.473Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/nexosecomsys
+[debug] [2025-01-08T15:37:46.434Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/runtimeconfig.googleapis.com 200
+[debug] [2025-01-08T15:37:46.434Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-01-08T15:37:46.449Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com 200
+[debug] [2025-01-08T15:37:46.449Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nexosecomsys/services/cloudfunctions.googleapis.com [omitted]
+[info] 
+Detected existing codebase(s): default
+
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote nexosecom/requirements.txt 
+[info] +  Wrote nexosecom/.gitignore 
+[info] +  Wrote nexosecom/main.py 
+[debug] [2025-01-08T15:51:08.830Z] Running command with virtualenv: command="C:\Users\baij\Desktop\egret-v18.0.0\seed - Copy\nexosecom\venv\Scripts\activate.bat", args=["","&&","pip3","install","--upgrade","pip"]
+[debug] [2025-01-08T15:51:10.145Z] Error: spawn "C:\Users\baij\Desktop\egret-v18.0.0\seed - Copy\nexosecom\venv\Scripts\activate.bat" ENOENT
+    at notFoundError (C:\Users\baij\AppData\Roaming\nvm\v20.18.1\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:6:26)
+    at verifyENOENT (C:\Users\baij\AppData\Roaming\nvm\v20.18.1\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:40:16)
+    at cp.emit (C:\Users\baij\AppData\Roaming\nvm\v20.18.1\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:27:25)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+[error] 
+[error] Error: An unexpected error has occurred.

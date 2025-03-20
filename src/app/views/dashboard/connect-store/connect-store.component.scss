@@ -1,0 +1,21 @@
+.connect-store-container {
+    padding: 20px;
+  }
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .platform-card {
+    text-align: center;
+  }
+  .platform-icon {
+    font-size: 48px;
+    height: 48px;
+    width: 48px;
+    margin: 20px 0;
+  }
+  mat-card-actions {
+    padding: 16px;
+  }

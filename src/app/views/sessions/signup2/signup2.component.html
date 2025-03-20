@@ -1,0 +1,46 @@
+<div class="seciton-left">
+  <div class="section-left-content">
+    <h1 class="text-36 font-light">Already have an account?</h1>
+    <p class="mb-6 text-small">Signin and get started!</p>
+    <button mat-flat-button color="accent" [routerLink]="'/sessions/signin'">Sign In</button>
+  </div>
+</div>
+<div class="form-holder h-screen mat-elevation-z4 mat-bg-card" [perfectScrollbar]="{}">
+  <form [formGroup]="signupForm" class="signup-form flex flex-col justify-start" (ngSubmit)="onSubmit()">
+    <!-- headline -->
+    <div class="form-headline text-center mb-4">
+      <h2 class="font-bold">Let's get started!</h2>
+      <p class="text-muted">Create an account get unlimited access</p>
+    </div>
+    <div class="mb-8 flex flex-wrap justify-center items-center">
+      <img width="200px" src="assets/images/illustrations/posting_photo.svg" alt="">
+    </div>
+    <div class="flex flex-wrap justify-between flex-col">
+      <mat-form-field class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" type="text" name="name" placeholder="Name" />
+      </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" name="email" placeholder="Email" />
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password" name="password" placeholder="********" />
+    </mat-form-field>
+
+    <!-- <mat-checkbox class="mb-6" formControlName="agreed">I agree with terms and condtions</mat-checkbox> -->
+    <button mat-raised-button color="primary" class="!mb-4">Signup</button>
+
+    </div>
+
+   
+
+    <div class="text-center mt-6">
+      <a [routerLink]="'/sessions/signin'" class="mat-color-primary text-center full-width">Sign in with an existing
+        account</a>
+    </div>
+  </form>
+</div>

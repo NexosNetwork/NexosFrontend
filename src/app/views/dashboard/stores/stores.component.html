@@ -1,0 +1,123 @@
+<div class="connect-store-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Connect Your Store</mat-card-title>
+        <mat-card-subtitle>Choose your e-commerce platform to connect</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <!-- <mat-form-field>
+          <input matInput [(ngModel)]="shopifyDomain" 
+                 placeholder="Enter your Shopify store domain">
+        </mat-form-field> -->
+        <div class="platform-grid">
+          <!-- Shopify -->
+          <mat-card class="platform-card" *ngFor="let store of usersData">
+            <mat-card-header>
+              <mat-card-title class="title">{{store.name}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-icon class="platform-icon">{{store.logoUrl}}</mat-icon>
+              <p>{{store.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <ng-container [ngSwitch]="store.status">
+                <!-- When store is already authorized, show a green (accent) button that’s disabled -->
+                <button *ngSwitchCase="'AUTHORIZED'" mat-raised-button color="success">
+                  Connected
+                </button>
+            
+                <!-- When store is unauthorized, show a button to re-authorize -->
+                <button *ngSwitchCase="'UNAUTHORIZED'" mat-raised-button color="primary" (click)="connectStore(store)">
+                  Authorize Again
+                </button>
+            
+                <!-- For not connected (or any other status), show the connect button -->
+                <button *ngSwitchDefault mat-raised-button color="primary" (click)="connectStore(store)">
+                  Connect {{ store.name }}
+                </button>
+              </ng-container>
+            
+              
+            </mat-card-actions>
+            
+          </mat-card>
+
+          <!-- Amazon -->
+          <!-- <mat-card class="platform-card">
+            <mat-card-header>
+              <mat-card-title>Amazon</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-icon class="platform-icon">local_shipping</mat-icon>
+              <p>Integrate your Amazon seller account</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="connectAmazon()">
+                Connect Amazon
+              </button>
+            </mat-card-actions>
+          </mat-card> -->
+
+          <!-- TikTok -->
+          <!-- <mat-card class="platform-card">
+            <mat-card-header>
+              <mat-card-title>TikTok Shop</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-icon class="platform-icon">video_library</mat-icon>
+              <p>Connect your TikTok shop</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="connectTikTok()">
+                Connect TikTok
+              </button>
+            </mat-card-actions>
+          </mat-card> -->
+
+          <!-- WooCommerce -->
+          <!-- <mat-card class="platform-card">
+            <mat-card-header>
+              <mat-card-title>WooCommerce</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-icon class="platform-icon">store</mat-icon>
+              <p>Connect your WooCommerce store</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="connectWooCommerce()">
+                Connect WooCommerce
+              </button>
+            </mat-card-actions>
+          </mat-card> -->
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+
+  <!-- Inline dialog template with a template reference variable -->
+  <ng-template #shopifyDialogTemplate let-data let-dialogRef="dialogRef">
+    <h2 mat-dialog-title class="dialog-title">Connect Shopify Store</h2>
+    <mat-dialog-content class="dialog-content">
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <input matInput  placeholder="Enter your Shopify store domain" [(ngModel)]="data.shopName">
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end" class="dialog-actions">
+      <button mat-button (click)="dialogRef.close()">Cancel</button>
+      <button mat-raised-button color="primary" (click)="dialogRef.close(data.shopName)">Connect</button>
+    </mat-dialog-actions>
+  </ng-template>
+  
+
+  <ng-template #statusDialogTemplate let-data class="status-model">
+    <h2 mat-dialog-title class="status-model">{{ data.title }}</h2>
+    <mat-dialog-content style="margin-left: 20px;">
+      <p>{{ data.message }}</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end" class="status-model">
+      <button mat-button mat-dialog-close (click)="closeStatusDialog()">OK</button>
+    </mat-dialog-actions>
+  </ng-template>

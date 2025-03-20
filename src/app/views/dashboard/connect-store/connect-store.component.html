@@ -1,0 +1,80 @@
+<div class="connect-store-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Connect Your Store</mat-card-title>
+        <mat-card-subtitle>Choose your e-commerce platform to connect</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput [(ngModel)]="shopifyDomain" 
+                 placeholder="Enter your Shopify store domain">
+        </mat-form-field>
+        <div class="platform-grid">
+          <!-- Shopify -->
+          <mat-card class="platform-card">
+            <mat-card-header>
+              <mat-card-title>Shopify</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-icon class="platform-icon">shopping_bag</mat-icon>
+              <p>Connect your Shopify store to manage orders and products</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="connectShopify(cleanShopifyDomain(shopifyDomain))">
+                Connect Shopify
+              </button>
+            </mat-card-actions>
+          </mat-card>
+
+          <!-- Amazon -->
+          <mat-card class="platform-card">
+            <mat-card-header>
+              <mat-card-title>Amazon</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-icon class="platform-icon">local_shipping</mat-icon>
+              <p>Integrate your Amazon seller account</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="connectAmazon()">
+                Connect Amazon
+              </button>
+            </mat-card-actions>
+          </mat-card>
+
+          <!-- TikTok -->
+          <mat-card class="platform-card">
+            <mat-card-header>
+              <mat-card-title>TikTok Shop</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-icon class="platform-icon">video_library</mat-icon>
+              <p>Connect your TikTok shop</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="connectTikTok()">
+                Connect TikTok
+              </button>
+            </mat-card-actions>
+          </mat-card>
+
+          <!-- WooCommerce -->
+          <mat-card class="platform-card">
+            <mat-card-header>
+              <mat-card-title>WooCommerce</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-icon class="platform-icon">store</mat-icon>
+              <p>Connect your WooCommerce store</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="connectWooCommerce()">
+                Connect WooCommerce
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
